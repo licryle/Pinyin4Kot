@@ -100,7 +100,7 @@ def check_consistency(xml_file, hanzi_map, output_file):
 
 if __name__ == "__main__":
     xml_file = "./pinyin4net/src/Pinyin4net/Resources/unicode_to_hanyu_pinyin.xml"
-    output_file = "Hanzi2Pinyin.txt"
+    output_file = "../resources/Hanzi2Pinyin.txt"
 
     hanzi_map = parse_xml(xml_file)
     process_map(hanzi_map, output_file)

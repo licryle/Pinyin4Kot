@@ -27,7 +27,6 @@ and then transformed into a fixed-padded file "database" for extra efficient rea
 ```
 $ cd src/main/python
 $ python3 .\gen_padded_file.py
-$ cp Hanzi2Pinyin.txt ../../resources
 ```
 
 ### Build the .jar
