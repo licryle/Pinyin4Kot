@@ -23,3 +23,10 @@ tasks.jar {
     archiveVersion.set("1.0.0")
     duplicatesStrategy = DuplicatesStrategy.EXCLUDE
 }
+
+java {
+    toolchain {
+        languageVersion.set(JavaLanguageVersion.of(17))
+        vendor.set(JvmVendorSpec.ADOPTIUM)
+    }
+}
