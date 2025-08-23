@@ -17,3 +17,9 @@ dependencies {
     implementation(kotlin("stdlib"))
     testImplementation(kotlin("test"))
 }
+
+tasks.jar {
+    archiveBaseName.set("pinyin4kot")
+    archiveVersion.set("1.0.0")
+    duplicatesStrategy = DuplicatesStrategy.EXCLUDE
+}
