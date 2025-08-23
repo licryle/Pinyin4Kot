@@ -22,6 +22,7 @@ tasks.jar {
     archiveBaseName.set("pinyin4kot")
     archiveVersion.set("1.0.0")
     duplicatesStrategy = DuplicatesStrategy.EXCLUDE
+    from(sourceSets.main.get().resources)
 }
 
 java {

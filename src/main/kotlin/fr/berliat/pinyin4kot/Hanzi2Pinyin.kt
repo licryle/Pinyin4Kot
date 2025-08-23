@@ -14,8 +14,8 @@ class Hanzi2Pinyin() {
 
     init {
         // Load resource into ByteBuffer
-        val resourceStream = this::class.java.getResourceAsStream("/Hanzi2PinYin.txt")
-            ?: throw IllegalStateException("Resource not found")
+        val resourceStream = this::class.java.getResourceAsStream("/Hanzi2Pinyin.txt")
+            ?: throw IllegalStateException("Resource not found. Report to dev.")
 
         val bytes = resourceStream.readAllBytes()
 
