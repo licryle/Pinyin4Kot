@@ -19,13 +19,13 @@ class Hanzi2Pinyin() {
 
         val bytes = resourceStream.readAllBytes()
 
-        if (bytes.size != (lastUnicode - firstUnicode) * lineLength)
+        if (bytes.size != (lastUnicode - firstUnicode + 1) * lineLength)
             throw InternalError("Issue with database file #1. Report to dev.")
 
         data = ByteBuffer.wrap(bytes)
     }
 
-    fun getPinyin(hanzi: Char): List<String> {
+    fun getPinyin(hanzi: Char): Array<String> {
         val code = hanzi.code
         if (code < firstUnicode || code > lastUnicode) {
             throw IndexOutOfBoundsException("Character $hanzi (U+${code.toString(16)}) out of supported range.")
@@ -46,7 +46,10 @@ class Hanzi2Pinyin() {
         return parsePinyin(line.substring(1)) // skip first char (HanZi)
     }
 
-    private fun parsePinyin(line: String): List<String> {
-        return line.chunked(pinyinMaxLength).map{ it.trim() }.filter { it.isNotEmpty() }
+    private fun parsePinyin(line: String): Array<String> {
+        return line.chunked(pinyinMaxLength)
+            .map{ it.trim() }
+            .filter { it.isNotEmpty() }
+            .toTypedArray()
     }
 }
