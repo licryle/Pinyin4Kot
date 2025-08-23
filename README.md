@@ -2,6 +2,10 @@
 
 Pinyin4Kot is a tiny library for  very efficient (o(1) retrieval) Chinese Character to PinYin lookup.
 
+## Limitations
+Only support the most 20902 characters from 一(Unicode 0x4E00) to 龥(Unicode 0x9FA5).
+For a detailed explanation of unicode ranges, this [stack overflow thread is best](https://stackoverflow.com/questions/1366068/whats-the-complete-range-for-chinese-characters-in-unicode).
+
 ## How to install
 Either:
 - Drop the JAR in yours libs
