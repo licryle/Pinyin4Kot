@@ -15,8 +15,14 @@ Either:
 ```
 import fr.berliat.pinyin4kot.Hanzi2PinYin
 
-    val map = Hanzi2PinYin()
-    map.getPinyin('你')
+val map = Hanzi2PinYin()
+map.getPinyin('你') // ["nǐ"]
+
+map.tonalToNumbered("diū") // "diu1"
+map.numberedToTonal("fou3") // "fǒu"
+
+map.pinyinToToneless("diu3") == "diu"
+map.pinyinToToneless("diū") == "diu"
 ```
 
 ## How to build
