@@ -1,9 +1,12 @@
-rootProject.name = "Pinyin4Kot"
+rootProject.name = "pinyin4kot"
 
 pluginManagement {
     repositories {
         gradlePluginPortal()
         mavenCentral()
+    }
+    plugins {
+        id("org.jetbrains.kotlin.jvm") version "1.9.0"
     }
 }
 
