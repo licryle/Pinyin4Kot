@@ -35,7 +35,7 @@ class Hanzi2Pinyin() {
         val resourceStream = this::class.java.getResourceAsStream("/Hanzi2Pinyin.txt")
             ?: throw IllegalStateException("Resource not found. Report to dev.")
 
-        val bytes = resourceStream.readAllBytes()
+        val bytes = resourceStream.readBytes()
 
         if (bytes.size != (lastUnicode - firstUnicode + 1) * lineLength)
             throw InternalError("Issue with database file #1. Report to dev.")
