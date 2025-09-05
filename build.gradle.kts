@@ -16,7 +16,7 @@ dependencies {
 
 tasks.jar {
     archiveBaseName.set("pinyin4kot")
-    archiveVersion.set("1.1.0")
+    archiveVersion.set("1.1.1")
     duplicatesStrategy = DuplicatesStrategy.EXCLUDE
     from(sourceSets.main.get().resources)
 }
