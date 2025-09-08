@@ -48,6 +48,8 @@ class Hanzi2PinyinTest {
         assert(map.numberedToTonal("dui4") == "duì")
         assert(map.numberedToTonal("diu1") == "diū")
         assert(map.numberedToTonal("fou3") == "fǒu")
+        assert(map.numberedToTonal("lü3") == "lǚ")
+        assert(map.numberedToTonal("lu:3") == "lǔ:") // Actually testing u: isn't treated
         assert(map.numberedToTonal("shoeiuüa2") == "shoeiuüá")
         assert(map.numberedToTonal("sheiuüo2") == "sheiuüó")
         assert(map.numberedToTonal("shieuü2") == "shiéuü")
@@ -60,6 +62,8 @@ class Hanzi2PinyinTest {
         assert(map.tonalToNumbered("shang") == "shang5")
         assert(map.tonalToNumbered("ào") == "ao4")
         assert(map.tonalToNumbered("diū") == "diu1")
+        assert(map.tonalToNumbered("lǚ") == "lü3")
+        assert(map.tonalToNumbered("lu:") == "lu:5") // Actually testing u: isn't treated
     }
 
     @Test

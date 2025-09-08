@@ -417,7 +417,7 @@
 侠xia2                                                    
 価jia4   jie4                                             
 侢zai4                                                    
-侣lu:3                                                    
+侣lü3                                                    
 侤                                                        
 侥jiao3  yao2   jia3                                      
 侦zhen1                                                   
@@ -436,7 +436,7 @@
 侳cuo4                                                    
 侴chou3                                                   
 侵qin1                                                    
-侶lu:3                                                    
+侶lü3                                                    
 侷ju2                                                     
 侸shu4                                                    
 侹ting3                                                   
@@ -633,7 +633,7 @@
 偸tou1                                                    
 偹bei4                                                    
 偺za2    zan2                                             
-偻lou2   lu:3                                             
+偻lou2   lü3                                             
 偼jie2                                                    
 偽wei4                                                    
 偾fen4                                                    
@@ -704,7 +704,7 @@
 傿yan4                                                    
 僀di4                                                     
 僁xi1                                                     
-僂lou2   lu:3                                             
+僂lou2   lü3                                             
 僃bei4                                                    
 僄piao1                                                   
 僅jin3   jin4                                             
@@ -800,7 +800,7 @@
 償chang2                                                  
 儠lie4                                                    
 儡lei3                                                    
-儢lu:3                                                    
+儢lü3                                                    
 儣kuang3                                                  
 儤bao4                                                    
 儥du2                                                     
@@ -1266,7 +1266,7 @@
 勱mai4                                                    
 勲xun1                                                    
 勳xun1                                                    
-勴lu:4                                                    
+勴lü4                                                    
 勵li4                                                     
 勶che4                                                    
 勷rang2                                                   
@@ -1369,7 +1369,7 @@
 単dan1   chan2                                            
 卙ji2                                                     
 博bo2                                                     
-卛shuai4 lu:4                                             
+卛shuai4 lü4                                             
 卜bu3    bo5                                              
 卝kuang4                                                  
 卞bian4                                                   
@@ -1555,7 +1555,7 @@
 吒zha4   zha1                                             
 吓he4    xia4                                             
 吔ye3                                                     
-吕lu:3                                                    
+吕lü3                                                    
 吖a1                                                      
 吗ma5    ma3    ma2                                       
 吘ou3                                                     
@@ -1600,7 +1600,7 @@
 吿gao4   gu4                                              
 呀ya1    ya5                                              
 呁jun4                                                    
-呂lu:3                                                    
+呂lü3                                                    
 呃e4     e5                                               
 呄ge2                                                     
 呅mei2                                                    
@@ -2327,7 +2327,7 @@
 圖tu2                                                     
 圗tu2                                                     
 團tuan2                                                   
-圙lu:e4                                                   
+圙lüe4                                                   
 圚hui4                                                    
 圛yi4                                                     
 圜yuan2  huan2                                            
@@ -2929,7 +2929,7 @@
 奰bei4                                                    
 奱lian2                                                   
 奲che3                                                    
-女nu:3   ru3                                              
+女nü3   ru3                                              
 奴nu2                                                     
 奵ding3                                                   
 奶nai3                                                    
@@ -3135,7 +3135,7 @@
 娾ai2                                                     
 娿e1                                                      
 婀e1                                                      
-婁lou2   lu:3                                             
+婁lou2   lü3                                             
 婂mian2                                                   
 婃cong2                                                   
 婄pou3                                                    
@@ -3579,7 +3579,7 @@
 寺si4                                                     
 寻xun2   xin2                                             
 导dao3                                                    
-寽lu:3   luo1                                             
+寽lü3   luo1                                             
 対dui4                                                    
 寿shou4                                                   
 尀po3                                                     
@@ -3679,11 +3679,11 @@
 属shu3   zhu3                                             
 屟xie4                                                    
 屠tu2                                                     
-屡lu:3                                                    
-屢lu:3                                                    
+屡lü3                                                    
+屢lü3                                                    
 屣xi3                                                     
 層ceng2                                                   
-履lu:3                                                    
+履lü3                                                    
 屦ju4                                                     
 屧xie4                                                    
 屨ju4                                                     
@@ -3904,7 +3904,7 @@
 崿e4                                                      
 嵀zhu4                                                    
 嵁kan1                                                    
-嵂lu:4                                                    
+嵂lü4                                                    
 嵃yan3                                                    
 嵄mei3                                                    
 嵅gan1   gan4                                             
@@ -4489,7 +4489,7 @@
 很hen3                                                    
 徉yang2                                                   
 徊huai2  hui2                                             
-律lu:4                                                    
+律lü4                                                    
 後hou4                                                    
 徍wang3                                                   
 徎cheng3                                                  
@@ -4598,7 +4598,7 @@
 念nian4                                                   
 忶hun2                                                    
 忷xiong1                                                  
-忸niu3   nu:4                                             
+忸niu3   nü4                                             
 忹wang3                                                   
 忺xian1                                                   
 忻xin1                                                    
@@ -4709,7 +4709,7 @@
 恤xu4                                                     
 恥chi3                                                    
 恦xiang4                                                  
-恧nu:4                                                    
+恧nü4                                                    
 恨hen4                                                    
 恩en1                                                     
 恪ke4    que4                                             
@@ -4972,7 +4972,7 @@
 慫song3                                                   
 慬jin3                                                    
 慭yin4                                                    
-慮lu:4                                                    
+慮lü4                                                    
 慯shang1                                                  
 慰wei4                                                    
 慱tuan2                                                   
@@ -4984,7 +4984,7 @@
 慷kang1  kang3                                            
 慸di4                                                     
 慹zhi2                                                    
-慺lu:2                                                    
+慺lü2                                                    
 慻juan4                                                   
 慼qi1                                                     
 慽qi1                                                     
@@ -5394,7 +5394,7 @@
 挑tiao3  tiao1                                            
 挒lie4                                                    
 挓zha1                                                    
-挔lu:3                                                    
+挔lü3                                                    
 挕die2                                                    
 挖wa1                                                     
 挗jue2                                                    
@@ -5449,7 +5449,7 @@
 捈tu2                                                     
 捉zhuo1                                                   
 捊pou2                                                    
-捋lu:3   luo1                                             
+捋lü3   luo1                                             
 捌ba1                                                     
 捍han4                                                    
 捎shao1  shao4                                            
@@ -5465,7 +5465,7 @@
 捘jun4                                                    
 捙yi4                                                     
 捚zhai1                                                   
-捛lu:3                                                    
+捛lü3                                                    
 捜sou1                                                    
 捝tuo1                                                    
 捞lao1                                                    
@@ -5534,7 +5534,7 @@
 掝huo4                                                    
 掞shan4                                                   
 掟ding4                                                   
-掠lu:e4  lu:e3                                            
+掠lüe4  lüe3                                            
 採cai3                                                    
 探tan4   tan1                                             
 掣che4                                                    
@@ -5883,7 +5883,7 @@
 擺bai3                                                    
 擻sou3   sou4                                             
 擼lu1                                                     
-擽lu:e4                                                   
+擽lüe4                                                   
 擾rao3                                                    
 擿zhi2                                                    
 攀pan1                                                    
@@ -5896,7 +5896,7 @@
 攇xian3                                                   
 攈jun4                                                    
 攉huo1                                                    
-攊lu:e4                                                   
+攊lüe4                                                   
 攋la4                                                     
 攌han4                                                    
 攍ying2                                                   
@@ -6083,7 +6083,7 @@
 旂qi2                                                     
 旃zhan1                                                   
 旄mao2   mao4                                             
-旅lu:3                                                    
+旅lü3                                                    
 旆pei4                                                    
 旇pi1                                                     
 旈liu2                                                    
@@ -6416,7 +6416,7 @@
 朏fei3                                                    
 朐qu2                                                     
 朑                                                        
-朒nu:4                                                    
+朒nü4                                                    
 朓tiao4  tiao3                                            
 朔shuo4                                                   
 朕zhen4                                                   
@@ -6814,7 +6814,7 @@
 條tiao2                                                   
 梞ji4                                                     
 梟xiao1                                                   
-梠lu:3                                                    
+梠lü3                                                    
 梡kuan3                                                   
 梢shao1  sao4                                             
 梣cen2                                                    
@@ -7046,7 +7046,7 @@
 榅yun2                                                    
 榆yu2                                                     
 榇chen4                                                   
-榈lu:2                                                    
+榈lü2                                                    
 榉ju3                                                     
 榊                                                        
 榋                                                        
@@ -7380,11 +7380,11 @@
 櫓lu3                                                     
 櫔                                                        
 櫕cuan2                                                   
-櫖lu:2                                                    
+櫖lü2                                                    
 櫗mie4                                                    
 櫘hui4                                                    
 櫙ou1                                                     
-櫚lu:2                                                    
+櫚lü2                                                    
 櫛zhi4   jie2                                             
 櫜gao1                                                    
 櫝du2                                                     
@@ -7678,7 +7678,7 @@
 毽jian4                                                   
 毾ta4                                                     
 毿san1                                                    
-氀lu:2                                                    
+氀lü2                                                    
 氁mu2                                                     
 氂li2                                                     
 氃tong2                                                   
@@ -7725,7 +7725,7 @@
 氬ya4                                                     
 氭dong1                                                   
 氮dan4                                                    
-氯lu:4                                                    
+氯lü4                                                    
 氰qing2                                                   
 氱yang3                                                   
 氲yun1                                                    
@@ -8418,7 +8418,7 @@
 满man3                                                    
 滢ying2                                                   
 滣chun2                                                   
-滤lu:4                                                    
+滤lü4                                                    
 滥lan4                                                    
 滦luan2                                                   
 滧xiao4                                                   
@@ -8456,7 +8456,7 @@
 漇xi3                                                     
 漈ji4                                                     
 漉lu4                                                     
-漊lu:3   lou2                                             
+漊lü3   lou2                                             
 漋long2                                                   
 漌jin3                                                    
 漍guo2                                                    
@@ -8700,7 +8700,7 @@
 濻dui4   wei2                                             
 濼luo4                                                    
 濽luo4                                                    
-濾lu:4                                                    
+濾lü4                                                    
 濿li4                                                     
 瀀you1                                                    
 瀁yang4                                                   
@@ -9223,7 +9223,7 @@
 爆bao4                                                    
 爇ruo4                                                    
 爈di4                                                     
-爉lu:4                                                    
+爉lü4                                                    
 爊ao2                                                     
 爋xun4                                                    
 爌kuang4                                                  
@@ -9605,7 +9605,7 @@
 玄xuan2                                                   
 玅miao4                                                   
 玆zi1                                                     
-率lu:4   shuai4 shuo4                                     
+率lü4   shuai4 shuo4                                     
 玈lu2                                                     
 玉yu4                                                     
 玊su4                                                     
@@ -10083,9 +10083,9 @@
 畢bi4                                                     
 畣da2                                                     
 畤zhi4                                                    
-略lu:e4                                                   
+略lüe4                                                   
 畦qi2    xi1                                              
-畧lu:e4                                                   
+畧lüe4                                                   
 畨pan1                                                    
 畩                                                        
 番fan1   pan1                                             
@@ -10141,7 +10141,7 @@
 疜xia4                                                    
 疝shan4                                                   
 疞xu1                                                     
-疟nu:e4  yao4                                             
+疟nüe4  yao4                                             
 疠li4                                                     
 疡yang2                                                   
 疢chen4                                                   
@@ -10277,7 +10277,7 @@
 瘤liu2                                                    
 瘥chai4  cuo2                                             
 瘦shou4                                                   
-瘧nu:e4  yao4                                             
+瘧nüe4  yao4                                             
 瘨dian1                                                   
 瘩da2    da5                                              
 瘪bie1   bie3                                             
@@ -11105,7 +11105,7 @@
 祠ci2                                                     
 祡chai2                                                   
 祢mi2    ni3                                              
-祣lu:3                                                    
+祣lü3                                                    
 祤yu3                                                     
 祥xiang2                                                  
 祦wu2                                                     
@@ -11268,7 +11268,7 @@
 稃fu1    fu2                                              
 稄ze4                                                     
 稅shui4                                                   
-稆lu:3                                                    
+稆lü3                                                    
 稇kun3                                                    
 稈gan3                                                    
 稉jing1                                                   
@@ -11356,7 +11356,7 @@
 穛zhuo1                                                   
 穜tong2                                                   
 穝                                                        
-穞lu:3                                                    
+穞lü3                                                    
 穟sui4                                                    
 穠nong2                                                   
 穡se4                                                     
@@ -11371,7 +11371,7 @@
 穪cheng1 chen4  cheng4                                    
 穫huo4                                                    
 穬gong3                                                   
-穭lu:3                                                    
+穭lü3                                                    
 穮biao1                                                   
 穯                                                        
 穰rang2                                                   
@@ -11895,7 +11895,7 @@
 籶shen1                                                   
 籷zhe2                                                    
 籸shen1                                                   
-籹nu:3                                                    
+籹nü3                                                    
 籺xie2                                                    
 类lei4                                                    
 籼xian1                                                   
@@ -12155,7 +12155,7 @@
 絺chi1                                                    
 絻mian3                                                   
 絼zhen3                                                   
-絽lu:3                                                    
+絽lü3                                                    
 絾cheng2                                                  
 絿qiu2                                                    
 綀shu1                                                    
@@ -12190,7 +12190,7 @@
 綝lin3                                                    
 綞duo3                                                    
 綟li4                                                     
-綠lu:4                                                    
+綠lü4                                                    
 綡liang2                                                  
 綢chou2                                                   
 綣quan3                                                   
@@ -12239,7 +12239,7 @@
 緎yu4                                                     
 総zong3                                                   
 緐fan2                                                    
-緑lu:4                                                    
+緑lü4                                                    
 緒xu4                                                     
 緓                                                        
 緔shang4                                                  
@@ -12341,7 +12341,7 @@
 縴qian4                                                   
 縵man4                                                    
 縶zhi2                                                    
-縷lu:3                                                    
+縷lü3                                                    
 縸mo4                                                     
 縹piao3  piao1                                            
 縺lian2                                                   
@@ -12541,7 +12541,7 @@
 综zong1  zeng4                                            
 绽zhan4                                                   
 绾wan3                                                    
-绿lu:4   lu4                                              
+绿lü4   lu4                                              
 缀zhui4                                                   
 缁zi1                                                     
 缂ke4                                                     
@@ -12563,7 +12563,7 @@
 缒zhui4                                                   
 缓huan3                                                   
 缔di4                                                     
-缕lu:3                                                    
+缕lü3                                                    
 编bian1                                                   
 缗min2                                                    
 缘yuan2                                                   
@@ -13184,7 +13184,7 @@
 腿tui3                                                    
 膀bang3  pang1  pang2  bang4                              
 膁qian3                                                   
-膂lu:3                                                    
+膂lü3                                                    
 膃wa4                                                     
 膄shou4                                                   
 膅tang2                                                   
@@ -13198,7 +13198,7 @@
 膍pi2                                                     
 膎xie2                                                    
 膏gao1   gao4                                             
-膐lu:3                                                    
+膐lü3                                                    
 膑bin4                                                    
 膒                                                        
 膓chang2                                                  
@@ -13213,10 +13213,10 @@
 膜mo2    mo4                                              
 膝xi1                                                     
 膞zhuan1                                                  
-膟lu:4                                                    
+膟lü4                                                    
 膠jiao1                                                   
 膡ying4                                                   
-膢lu:2                                                    
+膢lü2                                                    
 膣zhi4                                                    
 膤xue3                                                    
 膥chun1                                                   
@@ -13767,7 +13767,7 @@
 菆zou1                                                    
 菇gu1                                                     
 菈la1                                                     
-菉lu4    lu:4                                             
+菉lu4    lü4                                             
 菊ju2                                                     
 菋wei4                                                    
 菌jun1   jun4                                             
@@ -13900,8 +13900,8 @@
 葋qu2                                                     
 葌jian1                                                   
 葍fu2                                                     
-葎lu:4                                                    
-葏lu:4                                                    
+葎lü4                                                    
+葏lü4                                                    
 葐pen2                                                    
 葑feng1  feng4                                            
 葒hong2                                                   
@@ -14294,7 +14294,7 @@
 藕ou3                                                     
 藖xian2                                                   
 藗su4                                                     
-藘lu:2                                                    
+藘lü2                                                    
 藙yi4                                                     
 藚xu4                                                     
 藛xie3                                                    
@@ -14414,8 +14414,8 @@
 虍hu1                                                     
 虎hu3    hu4                                              
 虏lu3                                                     
-虐nu:e4                                                   
-虑lu:4                                                    
+虐nüe4                                                   
+虑lü4                                                    
 虒zhi4                                                    
 虓xiao1                                                   
 虔qian2                                                   
@@ -14912,9 +14912,9 @@
 蠿zha2                                                    
 血xue4   xie3                                             
 衁huang1                                                  
-衂nu:4                                                    
+衂nü4                                                    
 衃pei1                                                    
-衄nu:4                                                    
+衄nü4                                                    
 衅xin4                                                    
 衆zhong4                                                  
 衇mo4                                                     
@@ -15129,7 +15129,7 @@
 褘hui1                                                    
 褙bei4                                                    
 褚chu3   zhu3                                             
-褛lu:3                                                    
+褛lü3                                                    
 褜                                                        
 褝                                                        
 褞yun3                                                    
@@ -15158,7 +15158,7 @@
 褵li2                                                     
 褶zhe3   zhe2   xi2                                       
 褷shi1                                                    
-褸lu:3                                                    
+褸lü3                                                    
 褹yi4                                                     
 褺die1                                                    
 褻xie4                                                    
@@ -15634,7 +15634,7 @@
 謑xi4                                                     
 謒qiang1                                                  
 謓chen1                                                   
-謔nu:e4  xue4                                             
+謔nüe4  xue4                                             
 謕si1                                                     
 謖su4                                                     
 謗bang4                                                   
@@ -17110,7 +17110,7 @@
 郕cheng2                                                  
 郖dou1                                                    
 郗xi1                                                     
-郘lu:3                                                    
+郘lü3                                                    
 郙fu3                                                     
 郚wu2                                                     
 郛fu2                                                     
@@ -17399,7 +17399,7 @@
 釶ta1    tuo2                                             
 釷tu3                                                     
 釸xi4                                                     
-釹nu:3                                                    
+釹nü3                                                    
 釺qian1                                                   
 釻                                                        
 釼jian4                                                   
@@ -17599,7 +17599,7 @@
 銾gong3                                                   
 銿zhong1                                                  
 鋀dou4                                                    
-鋁lu:3                                                    
+鋁lü3                                                    
 鋂mei2                                                    
 鋃lang2                                                   
 鋄wan3                                                    
@@ -17627,7 +17627,7 @@
 鋚tiao2                                                   
 鋛gong3                                                   
 鋜zhuo2                                                   
-鋝lu:e4                                                   
+鋝lüe4                                                   
 鋞xing2                                                   
 鋟qin3                                                    
 鋠shen4                                                   
@@ -18016,7 +18016,7 @@
 鑟du2                                                     
 鑠shuo4                                                   
 鑡chuo4                                                   
-鑢lu:4                                                    
+鑢lü4                                                    
 鑣biao1                                                   
 鑤bao4                                                    
 鑥lu3                                                     
@@ -18067,7 +18067,7 @@
 钒fan2                                                    
 钓diao4                                                   
 钔men2                                                    
-钕nu:3                                                    
+钕nü3                                                    
 钖yang2                                                   
 钗chai1                                                   
 钘xing2                                                   
@@ -18139,7 +18139,7 @@
 铚zhi4                                                    
 铛dang1  cheng1                                           
 铜tong2                                                   
-铝lu:3                                                    
+铝lü3                                                    
 铞diao4                                                   
 铟yin1                                                    
 铠kai3                                                    
@@ -18184,7 +18184,7 @@
 锇e2                                                      
 锈xiu4                                                    
 锉cuo4                                                    
-锊lu:e4                                                   
+锊lüe4                                                   
 锋feng1                                                   
 锌xin1                                                    
 锍liu3                                                    
@@ -18347,7 +18347,7 @@
 閪                                                        
 閫kun3                                                    
 閬lang3  lang2  lang4                                     
-閭lu:2                                                    
+閭lü2                                                    
 閮ting2                                                   
 閯sha4                                                    
 閰yan2                                                    
@@ -18428,7 +18428,7 @@
 闻wen2                                                    
 闼ta4                                                     
 闽min3                                                    
-闾lu:2                                                    
+闾lü2                                                    
 闿kai3                                                    
 阀fa2                                                     
 阁ge2                                                     
@@ -19389,7 +19389,7 @@
 馼wen2                                                    
 馽zhi2                                                    
 馾dan4                                                    
-馿lu:2                                                    
+馿lü2                                                    
 駀you2                                                    
 駁bo2                                                     
 駂bao3                                                    
@@ -19552,7 +19552,7 @@
 驟zou4   zhou4                                            
 驠yan4                                                    
 驡peng2                                                   
-驢lu:2                                                    
+驢lü2                                                    
 驣teng2                                                   
 驤xiang1                                                  
 驥ji4                                                     
@@ -19570,7 +19570,7 @@
 驱qu1                                                     
 驲ri4                                                     
 驳bo2                                                     
-驴lu:2                                                    
+驴lü2                                                    
 驵zang3                                                   
 驶shi3                                                    
 驷si4                                                     
