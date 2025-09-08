@@ -7,9 +7,7 @@ class Hanzi2Pinyin() {
     private val firstUnicode = 0x4E00
     private val lastUnicode = 0x9FA5
     private val data: ByteBuffer
-    private val pinyinMaxLength = 7
-    private val maxPinyinCount = 8
-    private val lineLength = 4 + maxPinyinCount * pinyinMaxLength // 1 UTF8 Character, followed by max 8 pinyin of max length 7
+    private val lineLength = 4 + 36 // 1 UTF8 Character, followed by max concatenated (given by gen output)
     private val charset = Charset.forName("UTF-8")
 
     private val toneMap = mapOf(
@@ -111,7 +109,7 @@ class Hanzi2Pinyin() {
     }
 
     private fun parsePinyin(line: String): Array<String> {
-        return line.chunked(pinyinMaxLength)
+        return line.split(" ")
             .map{ it.trim() }
             .filter { it.isNotEmpty() }
             .toTypedArray()

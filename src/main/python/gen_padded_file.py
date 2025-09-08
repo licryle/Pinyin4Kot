@@ -38,9 +38,6 @@ def parse_xml(filename: str):
 
 
 def process_map(hanzi_map, output_file="output.txt"):
-    # 1. maximum number of pinyins
-    max_size = max(len(pinyins) for pinyins in hanzi_map.values())
-
     # We can't use len() as ü costs 2bytes instead of 1. So instead calculating real width for padding.
     def display_width(p: str) -> int:
         width = 0
@@ -51,32 +48,19 @@ def process_map(hanzi_map, output_file="output.txt"):
                 width += 1
         return width
 
+    # 1. compute the longest concatenated pinyin string
+    max_concat_width = max((display_width(" ".join(pinyins)) for pinyins in hanzi_map.values()), default=0)
+    print(f"Longest concatenated pinyin display width: {max_concat_width}")
+
     # 2. longest pinyin length
     longest_pinyin = max((display_width(p) for pinyins in hanzi_map.values() for p in pinyins), default=0)
 
-    print(f"Max size of pinyin list: {max_size}")
-    print(f"Longest pinyin length: {longest_pinyin}")
-
-    hanzi_items = list(hanzi_map.items())
-    total = len(hanzi_items)
-
     with open(output_file, "w", encoding="utf-8") as f:
-        for idx, (hanzi, pinyins) in enumerate(hanzi_items):
-            line_parts = [hanzi]
-
-            # add each pinyin + padding
-            for p in pinyins:
-                spaces = " " * (longest_pinyin - display_width(p)) # no separator
-                line_parts.append(p + spaces)
-
-            # fill up missing slots if less than max_size
-            remaining = max_size - display_width(pinyins)
-            if remaining > 0:
-                line_parts.append(" " * (remaining * longest_pinyin))
-
-            # join and add padding for fixed-width
-            line = "".join(line_parts)
-            f.write(line + "\n")
+        for hanzi, pinyins in hanzi_map.items():
+            concat = " ".join(pinyins)
+            padding_needed = max_concat_width - display_width(concat)
+            padded_line = hanzi + concat + " " * padding_needed
+            f.write(padded_line + "\n")
 
 
 def check_consistency(xml_file, hanzi_map, output_file):
