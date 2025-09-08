@@ -29,6 +29,9 @@ class Hanzi2PinyinTest {
         // ü is properly returned/handled
         assert(map.getPinyin('侣').contentEquals(arrayOf("lü3")))
 
+        // ü is properly returned/handled
+        assert(map.getPinyin('女').contentEquals(arrayOf("nü3", "ru3")))
+
                 // Last line
         assert(map.getPinyin('龥').contentEquals(arrayOf("yue4")))
 
