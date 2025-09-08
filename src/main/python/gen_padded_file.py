@@ -28,7 +28,7 @@ def parse_xml(filename: str):
             continue
 
         if hanyu_val:
-            pinyins = [p.strip() for p in hanyu_val.split(",") if p.strip()]
+            pinyins = [p.strip().replace("u:", "ü") for p in hanyu_val.split(",") if p.strip()]
         else:
             pinyins = []  # keep empty if no hanyu
 
@@ -41,8 +41,18 @@ def process_map(hanzi_map, output_file="output.txt"):
     # 1. maximum number of pinyins
     max_size = max(len(pinyins) for pinyins in hanzi_map.values())
 
+    # We can't use len() as ü costs 2bytes instead of 1. So instead calculating real width for padding.
+    def display_width(p: str) -> int:
+        width = 0
+        for c in p:
+            if c == "ü":
+                width += 2  # treat ü as 2 columns
+            else:
+                width += 1
+        return width
+
     # 2. longest pinyin length
-    longest_pinyin = max((len(p) for pinyins in hanzi_map.values() for p in pinyins), default=0)
+    longest_pinyin = max((display_width(p) for pinyins in hanzi_map.values() for p in pinyins), default=0)
 
     print(f"Max size of pinyin list: {max_size}")
     print(f"Longest pinyin length: {longest_pinyin}")
@@ -56,11 +66,11 @@ def process_map(hanzi_map, output_file="output.txt"):
 
             # add each pinyin + padding
             for p in pinyins:
-                spaces = " " * (longest_pinyin - len(p)) # no separator
+                spaces = " " * (longest_pinyin - display_width(p)) # no separator
                 line_parts.append(p + spaces)
 
             # fill up missing slots if less than max_size
-            remaining = max_size - len(pinyins)
+            remaining = max_size - display_width(pinyins)
             if remaining > 0:
                 line_parts.append(" " * (remaining * longest_pinyin))
 
