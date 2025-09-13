@@ -1,6 +1,3 @@
-[submodule "src/main/python/external/pinyin4net"]
-	path = src/main/python/external/pinyin4net
-	url = https://github.com/YangKuang/pinyin4net.git
-[submodule "src/main/python/pinyin4net"]
-	path = src/main/python/pinyin4net
+[submodule "crossPlatform/src/commonMain/python/pinyin4net"]
+	path = crossPlatform/src/commonMain/python/pinyin4net
 	url = https://github.com/YangKuang/pinyin4net

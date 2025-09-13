@@ -1,13 +1,13 @@
 package fr.berliat.pinyin4kot
 
-import kotlin.text.Charsets
+import fr.berliat.pinyin4kot.crossplatform.generated.resources.Res
+import kotlinx.coroutines.runBlocking
 
 class Hanzi2Pinyin() {
     private val firstUnicode = 0x4E00
     private val lastUnicode = 0x9FA5
     private val data: ByteArray
     private val lineLength = 4 + 36 // 1 UTF8 Character, followed by max concatenated (given by gen output)
-    private val charset = Charsets.UTF_8
 
     private val toneMap = mapOf(
         'ā' to Pair('a', 1), 'á' to Pair('a', 2),
@@ -28,14 +28,16 @@ class Hanzi2Pinyin() {
     private val tonePriority = listOf("a", "o", "e", "iu", "ui", "i", "u", "ü")
 
     init {
-        // Load resource into ByteBuffer
-        val resourceStream = this::class.java.getResourceAsStream("/Hanzi2Pinyin.txt")
-            ?: throw IllegalStateException("Resource not found. Report to dev.")
+        try {
+            // Load resource into ByteBuffer and make a string of it
+            // It's a very small file, so not going for a coroutine.
+            data = runBlocking { Res.readBytes("files/Hanzi2Pinyin.txt") }
 
-        data = resourceStream.readBytes()
-
-        if (data.size != (lastUnicode - firstUnicode + 1) * lineLength)
-            throw InternalError("Issue with database file #1. Report to dev.")
+            if (data.size != (lastUnicode - firstUnicode + 1) * lineLength)
+                throw IllegalStateException("Issue with database file #1. Report to dev.")
+        } catch (_: Exception) {
+            throw IllegalStateException("Resource not found. Report to dev.")
+        }
     }
 
     fun getPinyin(hanzi: Char): Array<String> {
@@ -47,12 +49,13 @@ class Hanzi2Pinyin() {
         val offset = (code - firstUnicode) * lineLength
         val lineBytes = data.copyOfRange(offset, offset + lineLength)
 
+        // Decode to string should be reading UTF8
         // Convert line bytes to string, remove trailing newline
-        val line = lineBytes.toString(charset).trimEnd('\n', '\r')
-        if (line.isEmpty()) throw InternalError("Issue with database file #2. Report to dev.")
+        val line = lineBytes.decodeToString().trimEnd('\n', '\r')
+        if (line.isEmpty()) throw IllegalStateException("Issue with database file #2. Report to dev.")
 
         val hanziFromLine = line[0]
-        if (hanziFromLine != hanzi) throw InternalError("Issue with database file #3. Report to dev.")
+        if (hanziFromLine != hanzi) throw IllegalStateException("Issue with database file #3. Report to dev.")
 
         return parsePinyin(line.substring(1)) // skip first char (HanZi)
     }
