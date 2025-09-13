@@ -1,14 +1,13 @@
 package fr.berliat.pinyin4kot
 
-import java.nio.ByteBuffer
-import java.nio.charset.Charset
+import kotlin.text.Charsets
 
 class Hanzi2Pinyin() {
     private val firstUnicode = 0x4E00
     private val lastUnicode = 0x9FA5
-    private val data: ByteBuffer
+    private val data: ByteArray
     private val lineLength = 4 + 36 // 1 UTF8 Character, followed by max concatenated (given by gen output)
-    private val charset = Charset.forName("UTF-8")
+    private val charset = Charsets.UTF_8
 
     private val toneMap = mapOf(
         'ā' to Pair('a', 1), 'á' to Pair('a', 2),
@@ -33,12 +32,10 @@ class Hanzi2Pinyin() {
         val resourceStream = this::class.java.getResourceAsStream("/Hanzi2Pinyin.txt")
             ?: throw IllegalStateException("Resource not found. Report to dev.")
 
-        val bytes = resourceStream.readBytes()
+        data = resourceStream.readBytes()
 
-        if (bytes.size != (lastUnicode - firstUnicode + 1) * lineLength)
+        if (data.size != (lastUnicode - firstUnicode + 1) * lineLength)
             throw InternalError("Issue with database file #1. Report to dev.")
-
-        data = ByteBuffer.wrap(bytes)
     }
 
     fun getPinyin(hanzi: Char): Array<String> {
@@ -48,12 +45,10 @@ class Hanzi2Pinyin() {
         }
 
         val offset = (code - firstUnicode) * lineLength
-        val lineBytes = ByteArray(lineLength)
-        data.position(offset)
-        data.get(lineBytes)
+        val lineBytes = data.copyOfRange(offset, offset + lineLength)
 
         // Convert line bytes to string, remove trailing newline
-        val line = String(lineBytes, charset).trimEnd('\n', '\r')
+        val line = lineBytes.toString(charset).trimEnd('\n', '\r')
         if (line.isEmpty()) throw InternalError("Issue with database file #2. Report to dev.")
 
         val hanziFromLine = line[0]
