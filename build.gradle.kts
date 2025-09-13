@@ -1,29 +1,77 @@
+import com.android.build.api.dsl.androidLibrary
+import org.jetbrains.kotlin.gradle.dsl.JvmTarget
+
 plugins {
-    kotlin("jvm")
+    kotlin("multiplatform")
+    id("com.android.kotlin.multiplatform.library")
 }
+
+group = "fr.berliat.pinyin4kot"
+version = "1.2.0"
 
 kotlin {
-    jvmToolchain(17)
-    compilerOptions {
-        jvmTarget.set(org.jetbrains.kotlin.gradle.dsl.JvmTarget.JVM_17)
+    jvm {
+        compilerOptions {
+            jvmTarget.set(JvmTarget.JVM_17)
+        }
+    }
+
+    androidLibrary {
+        namespace = "fr.berliat.floattextlayout"
+        compileSdk = 36
+        minSdk = 26
+
+        withHostTestBuilder {
+        }
+
+        withDeviceTestBuilder {
+            sourceSetTreeName = "test"
+        }.configure {
+            instrumentationRunner = "androidx.test.runner.AndroidJUnitRunner"
+        }
+    }
+
+    listOf(
+        iosX64(),
+        iosArm64(),
+        iosSimulatorArm64()
+    ).forEach { iosTarget ->
+        iosTarget.binaries.framework {
+            baseName = "shared"
+            isStatic = true
+        }
+    }
+
+    applyDefaultHierarchyTemplate()
+
+    sourceSets {
+        val commonMain by getting
+        val commonTest by getting {
+            dependencies {
+                implementation(kotlin("test"))
+            }
+        }
+
+        val jvmMain by getting
+        val jvmTest by getting
+
+        val androidMain by getting
     }
 }
 
-dependencies {
-    implementation(kotlin("stdlib"))
-    testImplementation(kotlin("test"))
-}
-
-tasks.jar {
+// Generate a JVM JAR including commonMain resources
+tasks.named<Jar>("jvmJar") {
     archiveBaseName.set("pinyin4kot")
-    archiveVersion.set("1.1.2")
+    archiveVersion.set(version.toString())
+
+    from(kotlin.targets.getByName("jvm").compilations.getByName("main").output)
+
     duplicatesStrategy = DuplicatesStrategy.EXCLUDE
-    from(sourceSets.main.get().resources)
 }
 
-java {
-    toolchain {
-        languageVersion.set(JavaLanguageVersion.of(17))
-        vendor.set(JvmVendorSpec.ADOPTIUM)
-    }
+tasks.findByName("allTests") ?: tasks.register("allTests") {
+    group = "verification"
+    description = "Run all JVM and iOS tests"
+
+    dependsOn(kotlin.targets.map { it.compilations.getByName("test").compileTaskProvider })
 }
