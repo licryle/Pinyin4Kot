@@ -7,7 +7,7 @@ pluginManagement {
         maven("https://maven.pkg.jetbrains.space/public/p/compose/dev")
     }
     plugins {
-        val kotlinVersion = "2.2.10"
+        val kotlinVersion = "2.2.20"
         val composeVersion = "1.8.2"
 
         kotlin("jvm").version(kotlinVersion)

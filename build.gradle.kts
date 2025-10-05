@@ -17,7 +17,7 @@ kotlin {
     }
 
     androidLibrary {
-        namespace = "fr.berliat.floattextlayout"
+        namespace = "fr.berliat.pinyin4kot"
         compileSdk = 36
         minSdk = 26
 
