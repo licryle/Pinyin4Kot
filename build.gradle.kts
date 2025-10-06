@@ -31,12 +31,19 @@ kotlin {
         }
     }
 
-    listOf(
-        iosX64(),
-        iosArm64(),
-        iosSimulatorArm64()
-    ).forEach { iosTarget ->
-        iosTarget.binaries.framework {
+    // iOS targets
+    val iosTargets = listOf(iosX64(), iosArm64(), iosSimulatorArm64())
+    iosTargets.forEach { target ->
+        target.binaries.framework {
+            baseName = "shared"
+            isStatic = true
+        }
+    }
+
+    // macOS targets
+    val macosTargets = listOf(macosX64(), macosArm64())
+    macosTargets.forEach { target ->
+        target.binaries.framework {
             baseName = "shared"
             isStatic = true
         }
@@ -56,6 +63,12 @@ kotlin {
         val jvmTest by getting
 
         val androidMain by getting
+
+        val iosMain by getting
+        val iosTest by getting
+
+        val macosMain by getting
+        val macosTest by getting
     }
 }
 
