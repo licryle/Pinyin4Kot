@@ -1,84 +1,111 @@
-import kotlin.test.Test
+package fr.berliat.pinyin4kot
 
-import fr.berliat.pinyin4kot.Hanzi2Pinyin
-import kotlin.test.assertContentEquals
-import kotlin.test.assertEquals
-import kotlin.test.assertTrue
+import kotlin.test.*
 
 class Hanzi2PinyinTest {
-    val map = Hanzi2Pinyin()
-
-    @Test
-    fun test() {
-        testGetPinyin()
-        testConvertPinyin()
-        testExtractToneless()
-    }
+    private val map = Hanzi2Pinyin()
 
     @Test
     fun testGetPinyin() {
-        assertContentEquals(map.getPinyin('你'), arrayOf("ni3"))
+        // Standard case
+        assertContentEquals(arrayOf("ni3"), map.getPinyin('你'))
 
-        try {
-            map.getPinyin('〇')
-            assertTrue(false)
-        } catch (_: IndexOutOfBoundsException) {
-            assertTrue(true)
-        }
+        // First and last supported characters (Boundaries)
+        assertContentEquals(arrayOf("yi1"), map.getPinyin('\u4E00'))
+        assertContentEquals(arrayOf("yue4"), map.getPinyin('\u9FA5'))
 
-        // First line
-        assertContentEquals(map.getPinyin('一'), arrayOf("yi1"))
-
-        // ü is properly returned/handled
-        assertContentEquals(map.getPinyin('侣'), arrayOf("lü3"))
-
-        // ü is properly returned/handled
-        assertContentEquals(map.getPinyin('女'), arrayOf("nü3", "ru3"))
-
-                // Last line
-        assertContentEquals(map.getPinyin('龥'), arrayOf("yue4"))
+        // ü handling
+        assertContentEquals(arrayOf("lü3"), map.getPinyin('侣'))
+        assertContentEquals(arrayOf("nü3", "ru3"), map.getPinyin('女'))
 
         // Multi-pinyin
-        assertContentEquals(map.getPinyin('龜'), arrayOf("gui1", "jun1", "qiu1"))
+        assertContentEquals(arrayOf("gui1", "jun1", "qiu1"), map.getPinyin('龜'))
     }
 
     @Test
-    fun testConvertPinyin() {
-        assertEquals(map.numberedToTonal("shang1"), "shāng")
-        assertEquals(map.numberedToTonal("shang2"), "sháng")
-        assertEquals(map.numberedToTonal("shang3"), "shǎng")
-        assertEquals(map.numberedToTonal("shang4"), "shàng")
-        assertEquals(map.numberedToTonal("shang"), "shang")
-        assertEquals(map.numberedToTonal("shang5"), "shang")
-
-        assertEquals(map.numberedToTonal("ao4"), "ào")
-
-        assertEquals(map.numberedToTonal("shao4"), "shào")
-        assertEquals(map.numberedToTonal("dui4"), "duì")
-        assertEquals(map.numberedToTonal("diu1"), "diū")
-        assertEquals(map.numberedToTonal("fou3"), "fǒu")
-        assertEquals(map.numberedToTonal("lü3"), "lǚ")
-        assertEquals(map.numberedToTonal("lu:3"), "lǔ:") // Actually testing u: isn't treated
-        assertEquals(map.numberedToTonal("shoeiuüa2"), "shoeiuüá")
-        assertEquals(map.numberedToTonal("sheiuüo2"), "sheiuüó")
-        assertEquals(map.numberedToTonal("shieuü2"), "shiéuü")
-        assertEquals(map.numberedToTonal("shiuü2"), "shiúü")
-
-        assertEquals(map.tonalToNumbered("shāng"), "shang1")
-        assertEquals(map.tonalToNumbered("sháng"), "shang2")
-        assertEquals(map.tonalToNumbered("shǎng"), "shang3")
-        assertEquals(map.tonalToNumbered("shàng"), "shang4")
-        assertEquals(map.tonalToNumbered("shang"), "shang5")
-        assertEquals(map.tonalToNumbered("ào"), "ao4")
-        assertEquals(map.tonalToNumbered("diū"), "diu1")
-        assertEquals(map.tonalToNumbered("lǚ"), "lü3")
-        assertEquals(map.tonalToNumbered("lu:"), "lu:5") // Actually testing u: isn't treated
+    fun testGetPinyinEmpty() {
+        // Characters in range but with no pinyin in database
+        assertContentEquals(emptyArray(), map.getPinyin('丆'))
+        assertContentEquals(emptyArray(), map.getPinyin('丷'))
     }
 
     @Test
-    fun testExtractToneless() {
-        assertEquals(map.pinyinToToneless("diū"), "diu")
-        assertEquals(map.pinyinToToneless("diu3"), "diu")
-        assertEquals(map.pinyinToToneless("diu"), "diu")
+    fun testGetPinyinOutOfRange() {
+        // Just outside range (Lower)
+        assertFailsWith<IndexOutOfBoundsException> {
+            map.getPinyin((Hanzi2Pinyin.firstUnicode - 1).toChar())
+        }
+        // Just outside range (Upper)
+        assertFailsWith<IndexOutOfBoundsException> {
+            map.getPinyin((Hanzi2Pinyin.lastUnicode + 1).toChar())
+        }
+        // Way outside (Special case '〇' is often mistaken for a Hanzi but is U+3007)
+        assertFailsWith<IndexOutOfBoundsException> { map.getPinyin('〇') }
+    }
+
+    @Test
+    fun testNumberedToTonal() {
+        // Standard tones
+        assertEquals("shāng", map.numberedToTonal("shang1"))
+        assertEquals("sháng", map.numberedToTonal("shang2"))
+        assertEquals("shǎng", map.numberedToTonal("shang3"))
+        assertEquals("shàng", map.numberedToTonal("shang4"))
+        
+        // Neutral tone
+        assertEquals("shang", map.numberedToTonal("shang"))
+        assertEquals("shang", map.numberedToTonal("shang5"))
+
+        // Vowel combinations (Priority rules)
+        assertEquals("ào", map.numberedToTonal("ao4"))
+        assertEquals("shào", map.numberedToTonal("shao4"))
+        assertEquals("fǒu", map.numberedToTonal("fou3"))
+        
+        // iu / ui exceptions (tone on the second vowel)
+        assertEquals("duì", map.numberedToTonal("dui4"))
+        assertEquals("diū", map.numberedToTonal("diu1"))
+        assertEquals("qiū", map.numberedToTonal("qiu1"))
+        assertEquals("xuě", map.numberedToTonal("xue3"))
+        
+        // ü
+        assertEquals("lǚ", map.numberedToTonal("lü3"))
+        
+        // Complex / Edge cases
+        assertEquals("", map.numberedToTonal(""))
+        assertEquals("m", map.numberedToTonal("m2")) // No vowels to accent
+        assertEquals("lǔ:", map.numberedToTonal("lu:3")) // colon preserved, u accented
+        
+        // Verification of complex priority logic
+        assertEquals("shoeiuüá", map.numberedToTonal("shoeiuüa2"))
+        assertEquals("sheiuüó", map.numberedToTonal("sheiuüo2"))
+        assertEquals("shiéuü", map.numberedToTonal("shieuü2"))
+        assertEquals("shiúü", map.numberedToTonal("shiuü2"))
+    }
+
+    @Test
+    fun testTonalToNumbered() {
+        assertEquals("shang1", map.tonalToNumbered("shāng"))
+        assertEquals("shang2", map.tonalToNumbered("sháng"))
+        assertEquals("shang3", map.tonalToNumbered("shǎng"))
+        assertEquals("shang4", map.tonalToNumbered("shàng"))
+        assertEquals("shang5", map.tonalToNumbered("shang"))
+        
+        assertEquals("ao4", map.tonalToNumbered("ào"))
+        assertEquals("diu1", map.tonalToNumbered("diū"))
+        assertEquals("lü3", map.tonalToNumbered("lǚ"))
+        assertEquals("lu:5", map.tonalToNumbered("lu:"))
+
+        // Known quirk: appending tone even if one exists (ni3 -> ni35)
+        assertEquals("ni35", map.tonalToNumbered("ni3"))
+    }
+
+    @Test
+    fun testPinyinToToneless() {
+        assertEquals("diu", map.pinyinToToneless("diū"))
+        assertEquals("diu", map.pinyinToToneless("diu3"))
+        assertEquals("diu", map.pinyinToToneless("diu"))
+        
+        // Combined cases
+        assertEquals("lü", map.pinyinToToneless("lǚ"))
+        assertEquals("shang", map.pinyinToToneless("shàng"))
     }
 }
