@@ -1,4 +1,3 @@
-import com.android.build.api.dsl.androidLibrary
 import org.jetbrains.kotlin.gradle.dsl.JvmTarget
 
 plugins {
@@ -16,7 +15,7 @@ kotlin {
         }
     }
 
-    androidLibrary {
+    android {
         namespace = "fr.berliat.pinyin4kot"
         compileSdk = 36
         minSdk = 26
