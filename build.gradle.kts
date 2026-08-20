@@ -9,9 +9,10 @@ group = "fr.berliat.pinyin4kot"
 version = "1.2.0"
 
 kotlin {
+    jvmToolchain(21)
     jvm {
         compilerOptions {
-            jvmTarget.set(JvmTarget.JVM_17)
+            jvmTarget.set(JvmTarget.JVM_21)
         }
     }
 
