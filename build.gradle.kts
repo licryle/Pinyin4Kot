@@ -52,23 +52,23 @@ kotlin {
     applyDefaultHierarchyTemplate()
 
     sourceSets {
-        val commonMain by getting
-        val commonTest by getting {
+        getByName("commonMain")
+        getByName("commonTest") {
             dependencies {
                 implementation(kotlin("test"))
             }
         }
 
-        val jvmMain by getting
-        val jvmTest by getting
+        getByName("jvmMain")
+        getByName("jvmTest")
 
-        val androidMain by getting
+        getByName("androidMain")
 
-        val iosMain by getting
-        val iosTest by getting
+        getByName("iosMain")
+        getByName("iosTest")
 
-        val macosMain by getting
-        val macosTest by getting
+        getByName("macosMain")
+        getByName("macosTest")
     }
 }
 
